@@ -1,8 +1,5 @@
-# Use official CompreFace single-container image
-FROM exadel/compreface:latest
+FROM exadel/compreface:1.2.0
 
-# Expose default port
+# No CMD or ENTRYPOINT override.
+# CompreFace image starts all internal services via supervisord.
 EXPOSE 80
-
-# Start CompreFace single-container script
-CMD ["/compreface/run.sh"]
