@@ -1,3 +1,8 @@
-FROM exadel/compreface:1.2.0
+# Use official CompreFace single-container image
+FROM exadel/compreface:latest
+
+# Expose default port
 EXPOSE 80
-ENV EXTERNAL_DB=true
+
+# Start CompreFace single-container script
+CMD ["/compreface/run.sh"]
